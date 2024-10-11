@@ -1,15 +1,13 @@
-const nums = [8, 9, 82, 1 ,99, 7];
+function isPrime(n) {
+    if (n <= 1) return false;
 
-function maxValue(arr) {
-    let max = arr[0];
-
-    for(let i = 1; i<arr.length; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) return false;
     }
 
-    return max;
-};
+    return true;
+}
 
-console.log(maxValue(nums));
+console.log(isPrime(4));
+console.log(isPrime(7));
+console.log(isPrime(19));
